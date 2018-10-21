@@ -11,11 +11,14 @@ import CoreData
 import AppCenter
 import AppCenterAnalytics
 import AppCenterCrashes
+import AppCenterDistribute
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+
+    
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -23,7 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 
         MSAppCenter.start("a5ee9b0a-bf05-4dd1-b09d-79afa7cef48a", withServices:[
             MSAnalytics.self,
-            MSCrashes.self])
+            MSCrashes.self, MSDistribute.self])
+        
         return true
     }
 
