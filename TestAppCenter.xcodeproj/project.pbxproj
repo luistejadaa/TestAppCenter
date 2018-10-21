@@ -60,6 +60,7 @@
 		D8E4EFC5217C9A340011959B /* TestAppCenterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestAppCenterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8E4EFC9217C9A340011959B /* TestAppCenterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAppCenterUITests.swift; sourceTree = "<group>"; };
 		D8E4EFCB217C9A340011959B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8E4EFD7217CADB80011959B /* TestAppCenter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TestAppCenter.entitlements; sourceTree = "<group>"; };
 		E295B515DD8975F4E7C3D216 /* Pods_TestAppCenterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestAppCenterTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -129,6 +130,7 @@
 		D8E4EFA5217C9A320011959B /* TestAppCenter */ = {
 			isa = PBXGroup;
 			children = (
+				D8E4EFD7217CADB80011959B /* TestAppCenter.entitlements */,
 				D8E4EFA6217C9A320011959B /* AppDelegate.swift */,
 				D8E4EFA8217C9A320011959B /* ViewController.swift */,
 				D8E4EFAA217C9A320011959B /* Main.storyboard */,
@@ -179,6 +181,7 @@
 				D8E4EF9F217C9A320011959B /* Sources */,
 				D8E4EFA0217C9A320011959B /* Frameworks */,
 				D8E4EFA1217C9A320011959B /* Resources */,
+				F05D2F32D727E05F1675572B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -239,6 +242,14 @@
 				TargetAttributes = {
 					D8E4EFA2217C9A320011959B = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					D8E4EFB9217C9A340011959B = {
 						CreatedOnToolsVersion = 10.0;
@@ -362,6 +373,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F05D2F32D727E05F1675572B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TestAppCenter/Pods-TestAppCenter-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/AppCenter/AppCenterDistributeResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AppCenterDistributeResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestAppCenter/Pods-TestAppCenter-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -549,6 +582,7 @@
 			baseConfigurationReference = A4FCD3DD77B2C816485C15D8 /* Pods-TestAppCenter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TestAppCenter/TestAppCenter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LPWYF22VV5;
 				INFOPLIST_FILE = TestAppCenter/Info.plist;
@@ -568,6 +602,7 @@
 			baseConfigurationReference = 1B6D59B86A6FAF9A3C807B91 /* Pods-TestAppCenter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TestAppCenter/TestAppCenter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LPWYF22VV5;
 				INFOPLIST_FILE = TestAppCenter/Info.plist;
