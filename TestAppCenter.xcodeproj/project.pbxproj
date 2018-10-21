@@ -181,7 +181,6 @@
 				D8E4EF9F217C9A320011959B /* Sources */,
 				D8E4EFA0217C9A320011959B /* Frameworks */,
 				D8E4EFA1217C9A320011959B /* Resources */,
-				2D00843B02649BC463631E96 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -309,28 +308,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2D00843B02649BC463631E96 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-TestAppCenter/Pods-TestAppCenter-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/AppCenter/AppCenterDistributeResources.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AppCenterDistributeResources.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestAppCenter/Pods-TestAppCenter-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		2EEA16BC72694F084C519F72 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
