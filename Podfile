@@ -8,7 +8,8 @@ target 'TestAppCenter' do
   use_frameworks!
   pod 'AppCenter'
   # Pods for TestAppCenter
-  pod 'Appcenter/Push'
+  pod 'AppCenter/Push'
+  pod 'AppCenter/Distribute'
 
   target 'TestAppCenterTests' do
     inherit! :search_paths

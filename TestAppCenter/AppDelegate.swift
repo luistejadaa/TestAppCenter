@@ -11,6 +11,8 @@ import CoreData
 import AppCenter
 import AppCenterAnalytics
 import AppCenterCrashes
+import AppCenterPush
+import AppCenterDistribute
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
