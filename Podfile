@@ -7,7 +7,6 @@ target 'TestAppCenter' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
   pod 'AppCenter'
-  pod 'AppCenter/Push'
   # Pods for TestAppCenter
 
   target 'TestAppCenterTests' do
